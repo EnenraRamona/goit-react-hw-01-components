@@ -1,5 +1,11 @@
 import styled from 'styled-components';
 
+const generateRandomBackGroundColor = () => {
+    const colors = ['#50c4f3', '#a83bf0', '#e84b66', '#21b7c5', '#091fc3'];
+    const randomBackGroundIndex = Math.floor(Math.random() * colors.length);
+    return colors[randomBackGroundIndex];
+};
+
 export const StatCard = styled.section`
 display: flex;
 flex-direction:column;
@@ -26,25 +32,27 @@ padding: 0;
 gap: 10px;
 
 :nth-last-child(5){
-    background-color: #50c4f3;
+    background-color: ${generateRandomBackGroundColor()};
 }
 :nth-last-child(4){
-    background-color: #a83bf0;
+    background-color: ${generateRandomBackGroundColor()};
 }
 
 :nth-last-child(3){
-    background-color: #e84b66;
+    background-color: ${generateRandomBackGroundColor()};
 }
 
 :nth-child(4){
-    background-color: #21b7c5;
+    background-color: ${generateRandomBackGroundColor};
 }
 
 :nth-child(5){
-    background-color: tomato;
+    background-color: ${generateRandomBackGroundColor()};
 }
 
 `; 
+
+
 
 export const StatItem = styled.li`
 display: flex;
@@ -63,7 +71,8 @@ font-size: 20px;
 margin-bottom: 5px;
 `;
 
-export const Persentage = styled.span`
+export const Percentage = styled.span`
 font-weight: 500;
 font-size: 20px;
 `
+
